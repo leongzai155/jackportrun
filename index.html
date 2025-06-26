@@ -2,129 +2,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PMC Jackpot - Online Casino Template</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>PMC Jackpot - High Fidelity Clone</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="logo">PMC Jackpot</div>
-    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-    <ul id="nav-menu">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Past Winners</a></li>
-      <li><a href="#" class="btn-register">Register</a></li>
-    </ul>
-  </header>
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Welcome to PMC Jackpot</h1>
-      <p class="tagline">The Ultimate Online Casino Experience</p>
-      <div class="countdown" id="countdown">
-        <span id="days">0</span> Days 
-        <span id="hours">0</span> Hours 
-        <span id="minutes">0</span> Minutes 
-        <span id="seconds">0</span> Seconds 
-      </div>
-      <p class="jackpot-update">The jackpot bonus is being updated, please check back later.</p>
-      <a href="#" class="cta-btn">Register Now</a>
+  <div class="bg-mask"></div>
+  <div class="countdown-wrap">
+    <div class="timer-box">
+      <span id="days" class="gold-big">03</span><div>Days</div>
     </div>
-  </section>
-  <div class="marquee">
-    <span>
-      Congratulations to User123 for winning MYR 5,000! 🎉&nbsp;&nbsp;&nbsp;
-      New Member Bonus 100% up to MYR 1,000! 💰&nbsp;&nbsp;&nbsp;
-      PlayerXYZ hit the Mega Jackpot of MYR 50,000! 🚀&nbsp;&nbsp;&nbsp;
-      Congratulations to User123 for winning MYR 5,000! 🎉&nbsp;&nbsp;&nbsp;
-      New Member Bonus 100% up to MYR 1,000! 💰&nbsp;&nbsp;&nbsp;
-      PlayerXYZ hit the Mega Jackpot of MYR 50,000! 🚀
-    </span>
+    <div class="timer-box">
+      <span id="hours" class="gold-big">00</span><div>Hours</div>
+    </div>
+    <div class="timer-box">
+      <span id="minutes" class="gold-big">00</span><div>Minutes</div>
+    </div>
+    <div class="timer-box">
+      <span id="seconds" class="gold-big">00</span><div>Seconds</div>
+    </div>
   </div>
-  <section class="jackpot-info">
-    <h2>Current Jackpot Prizes</h2>
-    <ul class="jackpot-list">
-      <li><strong>Supreme Jackpot:</strong> Lucky number 8.88 – MYR 348,452.00 <em>(Accumulating)</em></li>
-      <li><strong>Extreme Jackpot:</strong> Lucky number x.88 – MYR 8,888.00 <em>(Accumulating)</em></li>
-      <li><strong>Ultra Mega Jackpot:</strong> Lucky numbers 5.55, 6.66, 7.77, 9.99 – MYR 5,000.00</li>
-      <li><strong>Ultra Jackpot:</strong> Lucky numbers 0.00, 1.11, 2.22, 3.33, 4.44 – MYR 3,000.00</li>
-      <li><strong>Super Jackpot:</strong> Lucky numbers x.55, x.66, x.77, x.99 – MYR 2,500.00</li>
-      <li><span class="hot">HOT!</span> <strong>Big Jackpot:</strong> Lucky numbers x.00, x.11, x.22, x.33, x.44 – MYR 1,188.00</li>
-    </ul>
-    <ul class="promo-rules">
-      <li>All members are eligible to receive a PMC Jackpot bonus based on the last 3 digits of any jackpot they win in a game.</li>
-      <li>To qualify for the PMC Jackpot, players must play slot games (e.g. Mega888 or 2Win) and hit one of the jackpots.</li>
-      <li>This promotion is only available to players who have hit a Random, Minor, Major, or Mini Jackpot in slot games.</li>
-    </ul>
-  </section>
-  <section class="game-platforms">
-    <h2>Game Entrances</h2>
-    <div class="games-grid">
-      <div class="game-item">
-        <a href="#"><img src="https://cdn.pixabay.com/photo/2018/03/25/19/17/casino-3260372_1280.jpg" alt="Mega888 Platform" /><div class="game-name">Mega888</div></a>
-      </div>
-      <div class="game-item">
-        <a href="#"><img src="https://cdn.pixabay.com/photo/2015/08/28/05/15/las-vegas-911499_1280.jpg" alt="918Kiss Platform" /><div class="game-name">918Kiss</div></a>
-      </div>
-      <div class="game-item">
-        <a href="#"><img src="https://cdn.pixabay.com/photo/2017/12/17/16/31/poker-3024531_1280.jpg" alt="Pussy888 Platform" /><div class="game-name">Pussy888</div></a>
-      </div>
-      <div class="game-item">
-        <a href="#"><img src="https://cdn.pixabay.com/photo/2017/04/20/18/33/roulette-2246562_1280.jpg" alt="2Win Platform" /><div class="game-name">2Win</div></a>
+
+  <div class="jackpot-cards">
+    <div class="jackpot-card jackpot-gold">
+      <div class="ribbon ribbon-gold">ACCUMULATING</div>
+      <div class="jackpot-title">SUPREME JACKPOT</div>
+      <div class="jackpot-small">8.88</div>
+      <div class="jackpot-amount gold-big">
+        <span class="currency">MYR</span> 396,766<sup>00</sup>
       </div>
     </div>
-  </section>
-  <section class="partners">
-    <p>Valid PMC Jackpot Company: <a href="#">WWW.YOURPARTNERSITE.COM</a></p>
-    <p>Contact us on WhatsApp: 
-      <a href="https://wa.me/1234567890" target="_blank">
-        <svg class="wa-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 ...
-        +60123-456-789
-      </a>
-    </p>
-    <p>Valid Game Providers: Mega888, 2Win</p>
-  </section>
-  <a href="https://wa.me/1234567890" class="floating-whatsapp" target="_blank" title="Contact us on WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004...
-  </a>
+    <div class="jackpot-card jackpot-gold">
+      <div class="ribbon ribbon-gold">ACCUMULATING</div>
+      <div class="jackpot-title">EXTREME JACKPOT</div>
+      <div class="jackpot-small">x.88</div>
+      <div class="jackpot-amount gold-big">
+        <span class="currency">MYR</span> 8,888<sup>00</sup>
+      </div>
+    </div>
+    <div class="jackpot-card jackpot-white">
+      <div class="jackpot-title">ULTRA MEGA JACKPOT</div>
+      <div class="jackpot-small">5.55 | 6.66 | 7.77 | 9.99</div>
+      <div class="jackpot-amount jackpot-amount-white">
+        <span class="currency">MYR</span> 5,000<sup>00</sup>
+      </div>
+    </div>
+    <div class="jackpot-card jackpot-white">
+      <div class="jackpot-title">ULTRA JACKPOT</div>
+      <div class="jackpot-small">0.00 | 1.11 | 2.22 | 3.33 | 4.44</div>
+      <div class="jackpot-amount jackpot-amount-white">
+        <span class="currency">MYR</span> 3,000<sup>00</sup>
+      </div>
+    </div>
+    <div class="jackpot-card jackpot-white">
+      <div class="ribbon ribbon-red">HOT NUMBER</div>
+      <div class="jackpot-title">SUPER JACKPOT</div>
+      <div class="jackpot-small">x.55 | x.66 | x.77 | x.99</div>
+      <div class="jackpot-amount jackpot-amount-white">
+        <span class="currency">MYR</span> 2,500<sup>00</sup>
+      </div>
+    </div>
+    <div class="jackpot-card jackpot-white">
+      <div class="ribbon ribbon-red">HOT NUMBER</div>
+      <div class="jackpot-title">BIG JACKPOT</div>
+      <div class="jackpot-small">x.00 | x.11 | x.22 | x.33 | x.44</div>
+      <div class="jackpot-amount jackpot-amount-white">
+        <span class="currency">MYR</span> 1,188<sup>00</sup>
+      </div>
+    </div>
+  </div>
+
+  <div class="desc-section">
+    <ul>
+      <li>All members are entitled to receive PMC Jackpot bonus based on their last 3 digit number of the jackpot they won in game.</li>
+      <li>In order to qualify for this PMC Jackpot, players are required to play slot games in Mega888 or 2Win and hit the jackpot.</li>
+      <li>This promotion only available for the player who either achieved <b>Random Jackpot, Minor Jackpot, Major Jackpot or Mini Jackpot</b> in the slots games.</li>
+    </ul>
+    <div class="company-foot">Valid PMC Jackpot Company</div>
+  </div>
+
   <script>
-    document.getElementById('menu-toggle').addEventListener('click', function(){
-      var menu = document.getElementById('nav-menu');
-      if(menu) {
-        menu.classList.toggle('open');
-      }
-    });
-    (function(){
-      var targetDate = new Date();
-      targetDate.setDate(targetDate.getDate() + 30);
-      var countdownElem = document.getElementById('countdown');
-      if (!countdownElem) return;
-      var daysSpan = document.getElementById('days');
-      var hoursSpan = document.getElementById('hours');
-      var minutesSpan = document.getElementById('minutes');
-      var secondsSpan = document.getElementById('seconds');
-      function updateCountdown() {
-        var now = new Date().getTime();
-        var distance = targetDate.getTime() - now;
-        if (distance < 0) {
-          daysSpan.textContent = '0';
-          hoursSpan.textContent = '0';
-          minutesSpan.textContent = '0';
-          secondsSpan.textContent = '0';
-          return;
-        }
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        daysSpan.textContent = days;
-        hoursSpan.textContent = hours;
-        minutesSpan.textContent = minutes;
-        secondsSpan.textContent = seconds;
-      }
-      updateCountdown();
-      setInterval(updateCountdown, 1000);
-    })();
+    // 动态倒计时
+    var end = new Date();
+    end.setDate(end.getDate() + 3);
+    function pad(n){return n<10?'0'+n:n}
+    setInterval(function(){
+      var now = new Date();
+      var diff = Math.max(0, end - now);
+      var days = Math.floor(diff / (1000*60*60*24));
+      var hours = Math.floor((diff/(1000*60*60))%24);
+      var mins = Math.floor((diff/(1000*60))%60);
+      var secs = Math.floor((diff/1000)%60);
+      document.getElementById("days").textContent = pad(days);
+      document.getElementById("hours").textContent = pad(hours);
+      document.getElementById("minutes").textContent = pad(mins);
+      document.getElementById("seconds").textContent = pad(secs);
+    },1000);
   </script>
 </body>
 </html>

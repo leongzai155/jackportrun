@@ -1,59 +1,124 @@
 
-body, h1, h2, h3, p, ul, li, figure { margin: 0; padding: 0; }
-body { background-color: #000; color: #fff; font-family: sans-serif; line-height: 1.5; }
-ul { list-style: none; }
-a { color: inherit; text-decoration: none; }
-header { background: #111; padding: 10px 20px; position: relative; z-index: 1000; display: flex; align-items: center; justify-content: space-between; }
-.logo { font-size: 1.5em; font-weight: bold; color: #f0c040; }
-#nav-menu { display: flex; align-items: center; }
-#nav-menu li { margin: 0 15px; }
-#nav-menu a { padding: 5px 8px; display: block; font-size: 0.95em; }
-#nav-menu .btn-register { color: #fff; background: #e69138; padding: 8px 12px; border-radius: 4px; font-weight: bold; }
-#nav-menu .btn-register:hover { background: #cf7a17; }
-.menu-toggle { display: none; font-size: 1.5em; cursor: pointer; color: #fff; }
-@media (max-width: 768px) {
-  #nav-menu { position: absolute; top: 100%; right: 0; background: #111; flex-direction: column; width: 200px; display: none; }
-  #nav-menu.open { display: flex; }
-  #nav-menu li { margin: 10px 0; text-align: center; }
-  .menu-toggle { display: block; }
+html,body{height:100%;}
+body {
+  min-height:100vh;
+  margin:0;
+  color:#fff;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  background: #000 url('background.jpg') center/cover no-repeat fixed;
+  position:relative;
+  overflow-x:hidden;
 }
-.hero { position: relative; background: url('https://cdn.pixabay.com/photo/2014/03/07/03/26/jackpot-281423_1280.jpg') center/cover no-repeat; color: #fff; text-align: center; padding: 60px 20px; }
-.hero::before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); }
-.hero-content { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; }
-.hero h1 { font-size: 2em; margin-bottom: 10px; color: #ffda66; }
-.hero p.tagline { font-size: 1.1em; margin-bottom: 30px; }
-.hero .countdown { font-size: 1.1em; margin-bottom: 10px; }
-.hero .countdown span { font-weight: bold; margin: 0 5px; }
-.hero .jackpot-update { font-size: 0.95em; font-style: italic; margin-bottom: 30px; color: #f0e6d2; }
-.hero .cta-btn { display: inline-block; margin-top: 10px; padding: 12px 20px; font-size: 1em; font-weight: bold; color: #fff; background: #e69138; border-radius: 5px; }
-.hero .cta-btn:hover { background: #cf7a17; }
-.marquee { background: #222; color: #fffae0; overflow: hidden; white-space: nowrap; }
-.marquee span { display: inline-block; padding-right: 50%; animation: marquee-scroll 25s linear infinite; }
-@keyframes marquee-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-section.jackpot-info { background: #111; padding: 20px; text-align: center; }
-section.jackpot-info h2 { font-size: 1.5em; margin-bottom: 15px; color: #f0c040; }
-.jackpot-list { max-width: 800px; margin: 0 auto; text-align: left; font-size: 0.95em; line-height: 1.6; }
-.jackpot-list li { margin: 5px 0; }
-.jackpot-list li span.hot { color: #ff5722; font-weight: bold; margin-right: 5px; }
-.jackpot-list li strong { color: #ffda66; }
-.jackpot-list li em { color: #ccc; }
-.promo-rules { max-width: 800px; margin: 20px auto; font-size: 0.9em; line-height: 1.5; }
-.promo-rules li { margin: 8px 0; }
-section.game-platforms { padding: 30px 20px; text-align: center; }
-section.game-platforms h2 { font-size: 1.5em; margin-bottom: 20px; color: #f0c040; }
-.games-grid { display: flex; flex-wrap: wrap; justify-content: center; max-width: 1000px; margin: 0 auto; }
-.game-item { width: 200px; margin: 15px; text-align: center; }
-.game-item a { display: block; color: #fff; }
-.game-item img { max-width: 100%; border: 2px solid #333; border-radius: 4px; transition: transform 0.3s; }
-.game-item img:hover { transform: scale(1.05); }
-.game-name { margin-top: 8px; font-weight: bold; }
-@media (max-width: 600px) { .game-item { width: 45%; } }
-@media (max-width: 400px) { .game-item { width: 90%; } }
-section.partners { background: #111; padding: 20px; text-align: center; font-size: 0.9em; line-height: 1.6; }
-section.partners p { margin: 8px 0; }
-section.partners a { text-decoration: underline; color: #ffda66; }
-.wa-icon { vertical-align: middle; margin: -2px 4px 0 4px; }
-.floating-whatsapp { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: #fff; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-align: center; text-decoration: none; box-shadow: 0 0 10px rgba(0,0,0,0.5); z-index: 1000; animation: pulse 2s infinite; }
-.floating-whatsapp:hover { background: #20be5f; }
-.floating-whatsapp svg { fill: currentColor; }
-@keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+.bg-mask {
+  position:fixed; left:0; top:0; width:100vw; height:100vh;
+  background:rgba(0,0,0,0.68);
+  z-index:0;
+  pointer-events:none;
+}
+.countdown-wrap {
+  display:flex; justify-content:center; align-items:center;
+  gap:64px; margin:50px auto 16px auto; position:relative; z-index:2;
+}
+.timer-box {text-align:center;}
+.gold-big {
+  color:#ffe082;
+  font-size:3.6em;
+  font-family:'Segoe UI',Arial,sans-serif;
+  font-weight:bold;
+  letter-spacing:1px;
+  text-shadow: 0 3px 12px #000a;
+}
+.jackpot-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px 38px;
+  max-width:1280px;
+  margin:0 auto;
+  position:relative; z-index:2;
+}
+.jackpot-card {
+  background: #111d;
+  border-radius: 14px;
+  padding: 30px 34px 16px 34px;
+  min-width: 315px;
+  min-height: 170px;
+  box-shadow: 0 8px 32px #000b;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  display:flex; flex-direction:column; justify-content:center;
+}
+.jackpot-gold {
+  background: linear-gradient(to bottom,#1c1c1c 60%,#ffe082 100%);
+  color:#111;
+}
+.jackpot-gold .jackpot-title { color:#ffe082; }
+.jackpot-title {
+  font-size:1.25em;
+  font-weight:bold;
+  letter-spacing:1px;
+  margin-bottom:0.12em;
+  color:#fff;
+}
+.jackpot-small {
+  font-size:1em;
+  margin-bottom:0.6em;
+  color:#ccc;
+}
+.jackpot-amount {
+  color:#fff;
+  font-size:2.55em;
+  font-weight:700;
+  margin:0.2em 0 0 0;
+  letter-spacing:2px;
+  text-shadow:0 2px 12px #000a;
+}
+.gold-big .jackpot-amount { color:#222; }
+.jackpot-amount .currency { font-size:0.55em; vertical-align:top; letter-spacing:0; color:#bbb;}
+.jackpot-amount sup {font-size:0.42em;vertical-align:super;color:#bbb;font-weight:400; margin-left:2px;}
+.ribbon {
+  position:absolute;
+  right:-52px;
+  top:22px;
+  transform:rotate(32deg);
+  font-size:1.06em;
+  font-weight:bold;
+  color:#fff;
+  padding:3px 52px 3px 12px;
+  z-index:2;
+  box-shadow:0 2px 8px #0008;
+  letter-spacing:1px;
+  opacity:0.98;
+}
+.ribbon-gold { background:linear-gradient(90deg,#ffe082,#f6c443 60%); color:#333;}
+.ribbon-red { background:linear-gradient(90deg,#ea1626,#e84e33 60%); color:#fff;}
+.jackpot-white {
+  background:linear-gradient(to bottom,#161616 54%,#f7f7f7 100%);
+  color:#111;
+}
+.jackpot-amount-white {color:#444;}
+.desc-section {
+  max-width:900px;
+  margin:32px auto 0 auto;
+  font-size:1.11em;
+  color:#fff;
+  text-align:left;
+  z-index:2;
+  position:relative;
+}
+.desc-section ul { margin-left:16px; margin-bottom:8px; }
+.desc-section li { margin-bottom:8px; }
+.company-foot { margin-top:14px; font-size:1.2em; font-weight:bold; color:#fff; text-shadow:0 2px 8px #000a; }
+
+@media (max-width:1100px){
+  .jackpot-cards { gap:20px; }
+  .jackpot-card { min-width:210px; padding:18px 8px; font-size:0.97em;}
+  .countdown-wrap {gap:18px; font-size:0.93em;}
+}
+@media (max-width:700px){
+  .countdown-wrap{flex-wrap:wrap;gap:7vw;}
+  .jackpot-cards{flex-wrap:wrap;gap:5vw;max-width:98vw;}
+  .jackpot-card{min-width:150px;padding:10px 3px;font-size:0.89em;}
+}
